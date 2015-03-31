@@ -24,8 +24,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT_ID      0x6060
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    TDub
-#define PRODUCT         Atomic
-#define DESCRIPTION     t.m.k. keyboard firmware for Atomic
+#define PRODUCT         CMK 60
+#define DESCRIPTION     t.m.k. keyboard firmware for CMK60
 
 /* key matrix size */
 #define MATRIX_ROWS 5
