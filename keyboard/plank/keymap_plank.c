@@ -27,6 +27,8 @@ KEYMAP(TRNS, NLCK, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, PSCR, TRNS,  
        TRNS, TRNS, TRNS, TRNS, TRNS,    TRNS,   TRNS, TRNS, TRNS, TRNS, TRNS), \
 };
 
+
+/**
 enum macro_id {
   AE,
   SS,
@@ -74,7 +76,7 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt) {
           return MACRO( D(ALT), T(P0), T(P2), T(P5), T(P2), U(ALT) )
   }
   return MACRO_NONE;
-}
+} **/
 
 const uint16_t PROGMEM fn_actions[] = {
 	[0] = ACTION_LAYER_MOMENTARY(1),
@@ -87,5 +89,5 @@ const uint16_t PROGMEM fn_actions[] = {
   [7] = ACTION_MACRO(AE),/* ae AE */
   [8] = ACTION_MACRO(SS),/* ss */
   [9] = ACTION_MACRO(OE),/* oe OE */
-  [10] = ACTION(UE),/* ue UE */
+  [10] = ACTION_MACRO(UE),/* ue UE */
 };
