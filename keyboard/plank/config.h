@@ -24,12 +24,12 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define PRODUCT_ID      0x6060
 #define DEVICE_VER      0x0001
 #define MANUFACTURER    CodeMonkeyKeyboards (by Tdub)
-#define PRODUCT         CMK40
-#define DESCRIPTION     t.m.k. keyboard firmware for CMK40
+#define PRODUCT         CMK Plank
+#define DESCRIPTION     t.m.k. keyboard firmware for CMK Plank
 
 /* key matrix size */
-#define MATRIX_ROWS 5
-#define MATRIX_COLS 14
+#define MATRIX_ROWS 6
+#define MATRIX_COLS 8
 
 /* define if matrix has ghost */
 //#define MATRIX_HAS_GHOST
