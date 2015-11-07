@@ -28,7 +28,6 @@ KEYMAP(TRNS, NLCK, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, TRNS, PSCR, TRNS,  
 };
 
 
-/**
 enum macro_id {
   AE,
   SS,
@@ -50,44 +49,45 @@ const macro_t *action_get_macro(keyrecord_t *record, uint8_t id, uint8_t opt) {
         return MACRO( END );
       else
         if (shifted)
-          return MACRO( D(ALT), T(P0), T(P2), T(P2), T(P8), U(ALT) )
+          return MACRO( D(LALT), T(P0), T(P2), T(P2), T(P8), U(LALT) );
         else
-          return MACRO( D(ALT), T(P0), T(P1), T(P9), T(P6), U(ALT) )
+          return MACRO( D(LALT), T(P0), T(P1), T(P9), T(P6), U(LALT) );
     case SS:
       if (!event.pressed)
         return MACRO( END );
       else
-        return MACRO( D(ALT), T(P0), T(P2), T(P2), T(P3), U(ALT) )
+        return MACRO( D(LALT), T(P0), T(P2), T(P2), T(P3), U(LALT) );
     case OE:
       if (!event.pressed)
         return MACRO( END );
       else
         if (shifted)
-          return MACRO( D(ALT), T(P0), T(P2), T(P1), T(P4), U(ALT) )
+          return MACRO( D(LALT), T(P0), T(P2), T(P1), T(P4), U(LALT) );
         else
-          return MACRO( D(ALT), T(P0), T(P2), T(P4), T(P6), U(ALT) )
+          return MACRO( D(LALT), T(P0), T(P2), T(P4), T(P6), U(LALT) );
     case UE:
       if (!event.pressed)
         return MACRO( END );
       else
         if (shifted)
-          return MACRO( D(ALT), T(P0), T(P2), T(P2), T(P0), U(ALT) )
+          return MACRO( D(LALT), T(P0), T(P2), T(P2), T(P0), U(LALT) );
         else
-          return MACRO( D(ALT), T(P0), T(P2), T(P5), T(P2), U(ALT) )
+          return MACRO( D(LALT), T(P0), T(P2), T(P5), T(P2), U(LALT) );
   }
   return MACRO_NONE;
-} **/
+}
+
 
 const uint16_t PROGMEM fn_actions[] = {
 	[0] = ACTION_LAYER_MOMENTARY(1),
 	[1] = ACTION_LAYER_MOMENTARY(2),
-	[2] = ACTION_MODS_KEY(MOD_LSFT, LBRC),
-  [3] = ACTION_MODS_KEY(MOD_LSFT, RBRC),
+	[2] = ACTION_MODS_KEY(MOD_LSFT, KC_LBRC),
+  [3] = ACTION_MODS_KEY(MOD_LSFT, KC_RBRC),
 	[4] = ACTION_MODS_KEY(MOD_LSFT, 9),
   [5] = ACTION_MODS_KEY(MOD_LSFT, 0),
 	[6] = ACTION_LAYER_MOMENTARY(3),
-  [7] = ACTION_MACRO(AE),/* ae AE */
-  [8] = ACTION_MACRO(SS),/* ss */
-  [9] = ACTION_MACRO(OE),/* oe OE */
-  [10] = ACTION_MACRO(UE),/* ue UE */
+  [7] = ACTION_MACRO(AE),
+  [8] = ACTION_MACRO(SS),
+  [9] = ACTION_MACRO(OE),
+  [10] = ACTION_MACRO(UE),
 };
